@@ -3,6 +3,7 @@ package generators;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import entities.Person;
+import exceptions.AmountIsNegativeException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -41,6 +42,10 @@ public class Generator {
 
     public String generate(int amount, int startId)
     {
+        if (amount <= 0)
+        {
+            throw new AmountIsNegativeException();
+        }
         this.startId = startId;
         for (int i = 0; i < amount; i++)
         {

@@ -5,6 +5,7 @@ export default class DataTable extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            error: null,
             persons: [],
             amount: 1,
             startId: 0,

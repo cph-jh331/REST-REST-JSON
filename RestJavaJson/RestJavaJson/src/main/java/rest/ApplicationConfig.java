@@ -33,6 +33,8 @@ public class ApplicationConfig extends Application {
     {
         resources.add(cors.CorsRequestFilter.class);
         resources.add(cors.CorsResponseFilter.class);
+        resources.add(exceptionmappers.AmountIsNegativeExceptionMapper.class);
+        resources.add(exceptionmappers.NotFoundExceptionMapper.class);
         resources.add(rest.PersonResource.class);
     }
     
